@@ -1,12 +1,12 @@
 import React from 'react';
 import { Menu } from 'antd';
-import MenuConfig from './../../config/manuConfig';
+import MenuConfig from './../../config/menuConfig';
 import './index.less';
 
-const SubMenu = Menu.SubMenul
+const SubMenu = Menu.SubMenu;
 
-class NavLeft extends React.Component {
-  componentWillMount() {
+class NavLeft extends React.Component  {
+  componentWillMount () {
     const MenuTreeNode = this.renderMenu(MenuConfig);
     this.setState({
       MenuTreeNode
@@ -25,7 +25,7 @@ class NavLeft extends React.Component {
     return <Menu.Item title={item.title} key={item.key}>{item.title}</Menu.Item>
     })
   }
-  render() {
+  render () {
     return (
       <div>
         <div className="logo">

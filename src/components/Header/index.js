@@ -8,7 +8,7 @@ class Header extends React.Component {
   state = {};
   componentWillMount() {
     this.setState({
-      userName: '莱茵月牙'
+      userName: '十一大师'
     })
     setInterval(() => {
       let sysTime = Util.formateDate(new Date().getTime());
@@ -18,10 +18,11 @@ class Header extends React.Component {
     }, 1000)
   }
   getWeatherAPIDate() {
-    let city = encodeURIComponent('杭州');
+    let city = encodeURIComponent('上海');
     axios.jsonp({
       url:'http://api.map.baidu.com/telematics/v3/weather?location='+city+'&output=json&ak=kwQXPVDYPZIYArkpi3rQT7aZHTGTCCB2'
     }).then((res) => {
+      // eslint-disable-next-line eqeqeq
       if(res.status == 'success') {
         let data = res.result[0].weather_data[0];
         this.setState({
@@ -33,7 +34,7 @@ class Header extends React.Component {
   }
   render() {
     return (
-      <div class="header">
+      <div className="header">
         <Row className="header-top">
           <Col span={24}>
             <span>欢迎，{this.state.userName}</span>
@@ -46,7 +47,7 @@ class Header extends React.Component {
           </Col>
           <Col span={20} className="weather">
             <span className="date">{this.state.sysTime}</span>
-            <span className="weather-detail">情转多云</span>
+            <span className="weather-detail">晴转多云</span>
           </Col>
         </Row>
       </div>
