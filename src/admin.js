@@ -15,7 +15,7 @@ import './style/common.less';
         <Col span={20} className="main">
           <Header/>
           <Row className="content">
-            content
+            {this.props.children}   
           </Row>
           <Footer/>
         </Col>

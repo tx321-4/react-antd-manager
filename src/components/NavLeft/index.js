@@ -29,7 +29,7 @@ class NavLeft extends React.Component  {
     return (
       <div>
         <div className="logo">
-          <img src="/assets/logo-ant.svg" alt=""/>
+          <img src="/logo.png" alt=""/>
           <h1>SYDS</h1>
         </div>
         <Menu theme="dark">
