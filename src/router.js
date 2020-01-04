@@ -10,6 +10,7 @@ import FormRegister from './pages/form/register'
 import Buttons from './pages/ui/buttons';
 import Modals from './pages/ui/modals';
 import Loadings from './pages/ui/loadings';
+import Notice from './pages/ui/notification';
 
 export default class IRouter extends React.Component{
   render() {
@@ -32,9 +33,8 @@ export default class IRouter extends React.Component{
                       <Route path="/form/reg" component={FormRegister}></Route>
                       <Route path="/ui/modals" component={Modals}></Route>
                       <Route path="/ui/loadings" component={Loadings}></Route>
-                      {/* 
-                      
                       <Route path="/ui/notification" component={Notice}></Route>
+                      {/*  
                       <Route path="/ui/messages" component={Messages}></Route>
                       <Route path="/ui/tabs" component={Tabs}></Route>
                       <Route path="/ui/gallery" component={Gallery}></Route>
