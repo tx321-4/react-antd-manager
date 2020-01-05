@@ -5,12 +5,14 @@ import Login from './pages/Login';
 import NoMatch from './pages/NoMatch';
 import Admin from './admin';
 import Home from './pages/Home'
-import FormLogin from './pages/form/login'
-import FormRegister from './pages/form/register'
 import Buttons from './pages/ui/buttons';
 import Modals from './pages/ui/modals';
 import Loadings from './pages/ui/loadings';
 import Notice from './pages/ui/notification';
+import Messages from './pages/ui/messages';
+import FormLogin from './pages/form/login';
+import FormRegister from './pages/form/register';
+
 
 export default class IRouter extends React.Component{
   render() {
@@ -34,8 +36,8 @@ export default class IRouter extends React.Component{
                       <Route path="/ui/modals" component={Modals}></Route>
                       <Route path="/ui/loadings" component={Loadings}></Route>
                       <Route path="/ui/notification" component={Notice}></Route>
-                      {/*  
                       <Route path="/ui/messages" component={Messages}></Route>
+                      {/*  
                       <Route path="/ui/tabs" component={Tabs}></Route>
                       <Route path="/ui/gallery" component={Gallery}></Route>
                       <Route path="/ui/carousel" component={Carousel}></Route>
