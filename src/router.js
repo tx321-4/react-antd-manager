@@ -10,8 +10,15 @@ import Modals from './pages/ui/modals';
 import Loadings from './pages/ui/loadings';
 import Notice from './pages/ui/notification';
 import Messages from './pages/ui/messages';
+import Tabs from './pages/ui/tabs';
+import Gallery from './pages/ui/gallery';
+import Carousel from './pages/ui/carousel';
 import FormLogin from './pages/form/login';
 import FormRegister from './pages/form/register';
+import BasicTable from './pages/table/basicTable';
+import HighTable from './pages/table/highTable';
+import RichText from './pages/rich/index';
+import City from './pages/city/index';
 
 
 export default class IRouter extends React.Component{
@@ -37,16 +44,14 @@ export default class IRouter extends React.Component{
                       <Route path="/ui/loadings" component={Loadings}></Route>
                       <Route path="/ui/notification" component={Notice}></Route>
                       <Route path="/ui/messages" component={Messages}></Route>
-                      {/*  
                       <Route path="/ui/tabs" component={Tabs}></Route>
                       <Route path="/ui/gallery" component={Gallery}></Route>
-                      <Route path="/ui/carousel" component={Carousel}></Route>
-                      
-                      
+                      <Route path="/ui/carousel" component={Carousel}></Route>  
                       <Route path="/table/basic" component={BasicTable}></Route>
                       <Route path="/table/high" component={HighTable}></Route>
                       <Route path="/rich" component={RichText}></Route>
                       <Route path="/city" component={City}></Route>
+                      {/*                       
                       <Route path="/order" component={Order}></Route>
                       <Route path="/user" component={User}></Route>
                       <Route path="/bikeMap" component={BikeMap}></Route>
