@@ -6,7 +6,8 @@ import Utils from './../../utils/utils';
 const FormItem = Form.Item;
 const Option = Select.Option;
 
-export default class City extends React.Compoent{
+
+export default class City extends React.Component{
   state ={
     list: [],
     isShowOpenCity: false //默认隐藏弹框
@@ -127,6 +128,18 @@ export default class City extends React.Compoent{
             pagination={this.state.pagination}
           />
         </div>
+        <Modal
+          title="开通城市"
+          visible={this.state.isShowOpenCity}
+          onCancel={()=>{
+            this.setState({
+              isShowOpenCity: false
+            })
+          }}
+          onOk={this.handleSubmit}
+        >
+          <OpenCityForm wrappedComponentRef = {(inst) =>{this.cityForm = inst;}} />
+        </Modal>
       </div>
 
     )

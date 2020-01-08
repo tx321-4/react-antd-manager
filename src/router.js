@@ -19,6 +19,7 @@ import BasicTable from './pages/table/basicTable';
 import HighTable from './pages/table/highTable';
 import RichText from './pages/rich/index';
 import City from './pages/city/index';
+import Order from './pages/order/index';
 
 
 export default class IRouter extends React.Component{
@@ -51,8 +52,9 @@ export default class IRouter extends React.Component{
                       <Route path="/table/high" component={HighTable}></Route>
                       <Route path="/rich" component={RichText}></Route>
                       <Route path="/city" component={City}></Route>
-                      {/*                       
                       <Route path="/order" component={Order}></Route>
+                      {/*                       
+                      
                       <Route path="/user" component={User}></Route>
                       <Route path="/bikeMap" component={BikeMap}></Route>
                       <Route path="/charts/bar" component={Bar}></Route>
