@@ -1,11 +1,27 @@
 @import "./default.less";
 @import "./loading.less";
+
+ul, li {
+  list-style: none;
+}
+.clearfix{
+  &::after{
+    content: '';
+    clear: both;
+    display: block;
+    visibility: hidden;
+  }
+}
+.content{
+  padding: 20px;
+}
 .container {
   display: flex;
   .nav-left {
     width: 15%;
     min-width: 180px;
     height: calc(100vh);
+    color: #fff;
     background-color: #001529;
   }
   .main {
