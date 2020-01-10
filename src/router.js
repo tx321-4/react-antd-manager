@@ -20,9 +20,14 @@ import HighTable from './pages/table/highTable';
 import RichText from './pages/rich/index';
 import City from './pages/city/index';
 import User from './pages/user/index';
+import BikeMap from './pages/map/bikeMap';
+import Common from './common';
 import Order from './pages/order/index';
 import OrderDetail from './pages/order/detail';
-import Common from './common';
+import Bar from './pages/echarts/bar';
+import Pie from './pages/echarts/pie';
+import Line from './pages/echarts/line';
+
 
 
 export default class IRouter extends React.Component{
@@ -57,13 +62,13 @@ export default class IRouter extends React.Component{
                       <Route path="/city" component={City}></Route>
                       <Route path="/order" component={Order}></Route>
                       <Route path="/user" component={User}></Route>
-                      {/*                       
-                      
-                      
                       <Route path="/bikeMap" component={BikeMap}></Route>
                       <Route path="/charts/bar" component={Bar}></Route>
                       <Route path="/charts/pie" component={Pie}></Route>
                       <Route path="/charts/line" component={Line}></Route>
+                      {/*                       
+                      
+
                       <Route path="/permission" component={Permission}></Route> */}
                       <Redirect to="/home" />
                       <Route component={NoMatch}></Route>

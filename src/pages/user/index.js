@@ -48,8 +48,8 @@ export default class User extends React.Component{
     this.params = params;
     this.requestList();
   }
-  requestionList = () => {
-    axios.requestList(this, '/table/list', this.params);
+  requestList = () => {
+    axios.requestList(this, '/table/list1', this.params);
   }
 
   // 功能区操作
