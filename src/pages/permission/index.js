@@ -33,7 +33,7 @@ export default class Order extends React.Component{
           ...data
         }
       }
-    }).thne((res)=> {
+    }).then((res)=> {
       if(res){
         this.setState({
           isRoleVisible: false

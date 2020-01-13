@@ -3,6 +3,7 @@ import { Row, Col } from 'antd';
 import './index.less';
 import Util from '../../utils/utils';
 import axios from '../../axios';
+import { connect } from 'react-redux'; //连接器
 
 class Header extends React.Component {
   state = {};
@@ -33,7 +34,7 @@ class Header extends React.Component {
     })
   }
   render() {
-    const menuType = this.props.menuType;
+    const {menuName, menuType} = this.props;
     return (
       <div className="header">
         <Row className="header-top">
@@ -46,7 +47,7 @@ class Header extends React.Component {
           menuType ? '' :
           <Row className="breadcrumb">
             <Col span={4} className="breadcrumb-title">
-              首页
+              { menuName || '首页' }
             </Col>
             <Col span={20} className="weather">
               <span className="date">{this.state.sysTime}</span>
@@ -58,5 +59,11 @@ class Header extends React.Component {
     )
   }
 }
+//将state.menuName 绑定到props的 menuName
+const mapStateToProps = state => {
+  return {
+    menuName: state.menuName
+  }
+}
 
-export default Header;
+export default connect(mapStateToProps)(Header);
